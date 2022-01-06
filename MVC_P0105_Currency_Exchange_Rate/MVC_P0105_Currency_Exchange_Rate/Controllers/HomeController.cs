@@ -1,14 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
 using MVC_P0105_Currency_Exchange_Rate.DTOs;
 using MVC_P0105_Currency_Exchange_Rate.Models;
 using MVC_P0105_Currency_Exchange_Rate.Services;
 using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
-using System.Xml;
 
 namespace MVC_P0105_Currency_Exchange_Rate.Controllers
 {

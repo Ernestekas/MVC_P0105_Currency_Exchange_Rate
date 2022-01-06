@@ -1,10 +1,5 @@
 ﻿using MVC_P0105_Currency_Exchange_Rate.Models;
-using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MVC_P0105_Currency_Exchange_Rate.DTOs
 {
