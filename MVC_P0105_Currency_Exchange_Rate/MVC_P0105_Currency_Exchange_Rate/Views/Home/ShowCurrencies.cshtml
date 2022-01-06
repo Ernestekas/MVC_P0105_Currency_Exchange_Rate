@@ -1,5 +1,6 @@
 ﻿@model MVC_P0105_Currency_Exchange_Rate.DTOs.CurrenciesModel
 
+<script src="~/js/daysCalculator.js"></script>
 @using (Html.BeginForm("GetRates", "Home", FormMethod.Post))
 {
 <div style="width: 400px">
@@ -11,10 +12,14 @@
         </tr>
         <tr>
             <td>@Html.DropDownListFor(m => m.Year
-               , new SelectList(Model.PossibleDates.Years)
-               , new { @class = "form-control", @id="year", @onChange="changed()"})</td>
-            <td>@Html.DropDownListFor(m => m.Month, new SelectList(Model.PossibleDates.Months), new { @class = "form-control", @id="month" })</td>
-            <td>@Html.DropDownListFor(m => m.Day, new SelectList(Model.PossibleDates.Days), new { @class = "form-control", @id="day"})</td>
+                 , new SelectList(Model.PossibleDates.Years)
+                 , new { @class = "form-control", @id = "year", @onChange = "changed()" })</td>
+            <td>@Html.DropDownListFor(m => m.Month
+                 , new SelectList(Model.PossibleDates.Months)
+                 , new { @class = "form-control", @id = "month", @onChange = "changed()" })</td>
+            <td>@Html.DropDownListFor(m => m.Day
+                 , new SelectList(Model.PossibleDates.Days)
+                 , new { @class = "form-control", @id = "day" })</td>
         </tr>
     </table>
 </div>
@@ -54,14 +59,3 @@
         }
     </table>
 }
-
-<script type="text/javascript">
-    function changed() {
-        let yearDD = document.getElementById("year");
-        let monthDD = document.getElementById("month");
-        let dayDD = document.getElementById("day");
-
-        let leapYear = false;
-        alert(yearDD.attributes);
-    }
-</script>
